@@ -1,4 +1,6 @@
-# Guard::Sprockets [![Build Status](https://secure.travis-ci.org/guard/guard-sprockets.png?branch=master)](http://travis-ci.org/guard/guard-sprockets)
+# Guard::Sprockets
+
+[![Gem Version](https://badge.fury.io/rb/guard-sprockets.png)](http://badge.fury.io/rb/guard-sprockets) [![Build Status](https://travis-ci.org/guard/guard-sprockets.png?branch=master)](https://travis-ci.org/guard/guard-sprockets) [![Dependency Status](https://gemnasium.com/guard/guard-sprockets.png)](https://gemnasium.com/guard/guard-sprockets) [![Code Climate](https://codeclimate.com/github/guard/guard-sprockets.png)](https://codeclimate.com/github/guard/guard-sprockets) [![Coverage Status](https://coveralls.io/repos/guard/guard-sprockets/badge.png?branch=master)](https://coveralls.io/r/guard/guard-sprockets)
 
 Sprockets guard automatically packages your JavaScript files together when your source files are saved.
 
@@ -62,14 +64,3 @@ Please read [Guard doc](https://github.com/guard/guard#readme) for more informat
 :root_file   => 'app/js/app.js'      # if set, only this file will be compiled, default: nil
 :root_file   => ['one.js', 'two.js'] # root_file can be a String or an Array
 ```
-
-## License
-(The MIT License)
-
-Copyright (c) 2011-2012 Aaron Cruz
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

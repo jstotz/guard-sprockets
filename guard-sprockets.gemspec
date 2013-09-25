@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# encoding: utf-8
 $:.push File.expand_path('../lib', __FILE__)
 require 'guard/sprockets/version'
 
@@ -12,16 +12,13 @@ Gem::Specification.new do |s|
   s.summary     = 'Guard gem for Sprockets'
   s.description = 'Guard::Sprockets automatically packages your javascript files together.'
 
-  s.required_rubygems_version = '>= 1.3.6'
-  s.rubyforge_project = 'guard-sprockets'
+  s.add_runtime_dependency 'guard',     '>= 1.8'
+  s.add_runtime_dependency 'execjs',    '~> 1.0'
+  s.add_runtime_dependency 'sprockets', '~> 2.0'
 
-  s.add_dependency 'guard',     '>= 1.1.0'
-  s.add_dependency 'execjs',    '~> 1.0'
-  s.add_dependency 'sprockets', '~> 2.0'
+  s.add_development_dependency 'bundler'
+  s.add_development_dependency 'rspec'
 
-  s.add_development_dependency 'bundler', '~> 1.1'
-  s.add_development_dependency 'rspec',   '~> 2.10'
-
-  s.files        = Dir.glob('{lib}/**/*') + %w[README.md]
+  s.files        = Dir.glob('{lib}/**/*') + %w[LICENSE README.md]
   s.require_path = 'lib'
 end
