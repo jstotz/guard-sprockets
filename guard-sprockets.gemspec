@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.summary     = 'Guard gem for Sprockets'
   s.description = 'Guard::Sprockets automatically packages your javascript files together.'
 
-  s.add_runtime_dependency 'guard',     '>= 1.8'
-  s.add_runtime_dependency 'execjs',    '~> 1.0'
+  s.add_runtime_dependency 'guard',     '~> 1.8'
+  s.add_runtime_dependency 'execjs',    '~> 2.0'
   s.add_runtime_dependency 'sprockets', '~> 2.0'
 
   s.add_development_dependency 'bundler'
