@@ -10,7 +10,9 @@ Gem::Specification.new do |s|
   s.email       = ['aaron@aaroncruz.com', 'kematzy at gmail']
   s.homepage    = 'https://rubygems.org/gems/guard-sprockets'
   s.summary     = 'Guard gem for Sprockets'
-  s.description = 'Guard::Sprockets automatically packages your javascript files together.'
+  s.description = 'Guard::Sprockets automatically packages your JavaScript files together.'
+
+  s.required_ruby_version = '>= 1.8.7'
 
   s.add_runtime_dependency 'guard',     '~> 1.8'
   s.add_runtime_dependency 'execjs',    '~> 2.0'
