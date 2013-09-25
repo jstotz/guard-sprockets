@@ -91,4 +91,4 @@ For questions please join us in our [Google group](http://groups.google.com/grou
 
 ## Contributors
 
-https://github.com/guard/guard-sprockets/contributors
+[https://github.com/guard/guard-sprockets/graphs/contributors](https://github.com/guard/guard-sprockets/graphs/contributors)
