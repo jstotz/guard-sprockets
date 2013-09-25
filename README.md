@@ -5,7 +5,7 @@
 Sprockets guard automatically packages your JavaScript files together when your source files are saved.
 
 * Compatible with Sprockets 2.x (for Sprockets 1.x compatibility, please use Guard::Sprockets 0.1.4 or the `sprockets_1` branch).
-* Tested against Ruby 1.8.7, 1.9.2, 1.9.3, REE and the latest versions of JRuby & Rubinius.
+* Tested against Ruby 1.9.3, 2.0.0, Rubinius & JRuby (1.9 mode only).
 
 ## Install
 
