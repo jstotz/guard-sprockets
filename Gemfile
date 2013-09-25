@@ -14,6 +14,7 @@ end
 # installed on Travis CI
 #
 group :test do
+  gem 'json' if RUBY_VERSION =~ /^1\.8/
   gem 'rspec'
   gem 'coveralls', :require => false
 end
