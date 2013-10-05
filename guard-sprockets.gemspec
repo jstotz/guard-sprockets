@@ -8,14 +8,14 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.license     = 'MIT'
   s.authors     = ['Aaron Cruz', 'Kematzy']
-  s.email       = ['aaron@aaroncruz.com', 'kematzy at gmail']
+  s.email       = ['remy@rymai.me']
   s.homepage    = 'https://rubygems.org/gems/guard-sprockets'
   s.summary     = 'Guard gem for Sprockets'
   s.description = 'Guard::Sprockets automatically packages your JavaScript files together.'
 
   s.required_ruby_version = '>= 1.9.2'
 
-  s.add_runtime_dependency 'guard',     '>= 2.0.0.pre.3'
+  s.add_runtime_dependency 'guard',     '~> 2.0'
   s.add_runtime_dependency 'execjs',    '~> 2.0'
   s.add_runtime_dependency 'sprockets', '~> 2.0'
 
