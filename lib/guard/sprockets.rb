@@ -26,11 +26,20 @@ module Guard
         begin
           require 'uglifier'
           @sprockets.js_compressor = ::Uglifier.new
-          UI.info 'Sprockets will compress output.'
+          UI.info 'Sprockets will compress JavaScript output.'
         rescue LoadError => ex
-          UI.error "minify: Uglifier cannot be loaded. No compression will be used.\nPlease include 'uglifier' in your Gemfile."
+          UI.error "minify: Uglifier cannot be loaded. No JavaScript compression will be used.\nPlease include 'uglifier' in your Gemfile."
           UI.debug ex.message
         end
+        
+        begin
+          require 'yui/compressor'
+          @sprockets.css_compressor = YUI::CssCompressor.new
+          UI.info 'Sprockets will compress CSS output.'
+        rescue LoadError => ex
+          UI.error "minify: yui-compressor cannot be loaded. No CSS compression will be used.\nPlease include 'yui-compressor' in your Gemfile."
+          UI.debug ex.message
+        end        
       end
     end
 
