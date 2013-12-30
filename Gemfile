@@ -4,6 +4,7 @@ gemspec
 
 gem 'rake'
 gem 'uglifier'
+gem 'yui-compressor'
 
 group :development do
   gem 'ruby_gntp'
