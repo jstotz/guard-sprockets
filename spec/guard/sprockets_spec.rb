@@ -20,6 +20,12 @@ describe Guard::Sprockets do
         it { described_class.new(minify: true).sprockets.js_compressor.should_not be_nil }
       end
 
+      describe 'css_minify' do
+        it { described_class.new.sprockets.css_compressor.should be_nil }
+        it { described_class.new(css_minify: false).sprockets.css_compressor.should be_nil }
+        it { described_class.new(css_minify: true).sprockets.css_compressor.should_not be_nil }
+      end
+
       describe 'root_file' do
         it { described_class.new.root_file.should eq [] }
         it { described_class.new(root_file: 'foo/bar').root_file.should eq ['foo/bar'] }
