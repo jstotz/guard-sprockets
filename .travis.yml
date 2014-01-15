@@ -6,6 +6,6 @@ rvm:
   - 2.1.0
   - jruby-19mode
   - rbx
-notifications:
-  recipients:
-    - remy@rymai.me
+matrix:
+  allow_failures:
+    - rvm: rbx
