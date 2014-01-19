@@ -55,8 +55,8 @@ Please read [Guard doc](https://github.com/guard/guard#readme) for more informat
 destination: 'public/js'          # change the destination folder in which the compiled assets are saved, default: 'public/javascripts'
 asset_paths: 'app/js'             # add a directory (or on array of directories) to Sprockets' environment's load path, default: ['app/assets/javascripts']
 asset_paths: ['app/js', 'lib/js'] # asset_paths can be a String or an Array
-minify: true                      # minify the JavaScript files content using Uglifier, default: false
-                                  # be sure to add: "gem 'uglifier'" in your Gemfile
+minify: true                 # minify the JavaScript files content using Uglifier. You can pass true, false, or an Uglifier options hash. default: false
+                                     # be sure to add: "gem 'uglifier'" in your Gemfile
 css_minify: true                  # minify the CSS files content using YUI Compressor, default: false
                                   # be sure to add: "gem 'yui-compressor'" in your Gemfile
 keep_paths: true                 # retain the directory structure of an asset's path relative to the asset_path, default: false
