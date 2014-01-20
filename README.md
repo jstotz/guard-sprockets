@@ -55,16 +55,16 @@ Please read [Guard doc](https://github.com/guard/guard#readme) for more informat
 destination: 'public/js'          # change the destination folder in which the compiled assets are saved, default: 'public/javascripts'
 asset_paths: 'app/js'             # add a directory (or on array of directories) to Sprockets' environment's load path, default: ['app/assets/javascripts']
 asset_paths: ['app/js', 'lib/js'] # asset_paths can be a String or an Array
-minify: true                 # minify the JavaScript files content using Uglifier. You can pass true, false, or an Uglifier options hash. default: false
-                                     # be sure to add: "gem 'uglifier'" in your Gemfile
+js_minify: true                   # minify the JavaScript files content using Uglifier. You can pass true, false, or an Uglifier options hash. default: false
+                                  # be sure to add: "gem 'uglifier'" in your Gemfile
 css_minify: true                  # minify the CSS files content using YUI Compressor, default: false
                                   # be sure to add: "gem 'yui-compressor'" in your Gemfile
-keep_paths: true                 # retain the directory structure of an asset's path relative to the asset_path, default: false
-                                     # this prevents assets with the same basename, but placed different folders, from overwriting each other in the destination folder
-                                     # e.x. with this option set to true: app/js/vendor/rails/turbolinks.js.coffee -> public/js/vendor/rails/turbolinks.js
-                                     # and with this option set to false: app/js/vendor/rails/turbolinks.js.coffee -> public/js/turbolinks.js
-root_file: 'app/js/app.js'      # if set, only this file will be compiled, default: nil
-root_file: ['one.js', 'two.js'] # root_file can be a String or an Array
+keep_paths: true                  # retain the directory structure of an asset's path relative to the asset_path, default: false
+                                  # this prevents assets with the same basename, but placed different folders, from overwriting each other in the destination folder
+                                  # e.x. with this option set to true: app/js/vendor/rails/turbolinks.js.coffee -> public/js/vendor/rails/turbolinks.js
+                                  # and with this option set to false: app/js/vendor/rails/turbolinks.js.coffee -> public/js/turbolinks.js
+root_file: 'app/js/app.js'        # if set, only this file will be compiled, default: nil
+root_file: ['one.js', 'two.js']   # root_file can be a String or an Array
 ```
 
 ## Development

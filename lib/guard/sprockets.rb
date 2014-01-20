@@ -22,13 +22,14 @@ module Guard
       @asset_paths.each { |p| @sprockets.append_path(p) }
       @root_file.each { |f| @sprockets.append_path(Pathname.new(f).dirname) }
 
-      if @options[:minify]
+      if js_minify_option = @options[:js_minify] || @options[:minify]
+        UI.warning 'DEPRECATION WARNING: The :minify option has been renamed to :js_minify. Please modify your Guardfile to use the :js_minify option instead.' if @options[:minify]
         begin
           require 'uglifier'
-          @sprockets.js_compressor = ::Uglifier.new(@options[:minify].is_a?(Hash) ? @options[:minify] : {})
+          @sprockets.js_compressor = ::Uglifier.new(js_minify_option.is_a?(Hash) ? js_minify_option : {})
           UI.info 'Sprockets will compress JavaScript output.'
         rescue LoadError => ex
-          UI.error "minify: Uglifier cannot be loaded. No JavaScript compression will be used.\nPlease include 'uglifier' in your Gemfile."
+          UI.error "js_minify: Uglifier cannot be loaded. No JavaScript compression will be used.\nPlease include 'uglifier' in your Gemfile."
           UI.debug ex.message
         end        
       end

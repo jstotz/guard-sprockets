@@ -15,11 +15,11 @@ describe Guard::Sprockets do
         it { described_class.new(destination: 'foo/bar').destination.should eq 'foo/bar' }
       end
 
-      describe 'minify' do
+      describe 'js_minify' do
         it { described_class.new.sprockets.js_compressor.should be_nil }
-        it { described_class.new(minify: false).sprockets.js_compressor.should be_nil }
-        it { described_class.new(minify: true).sprockets.js_compressor.should_not be_nil }
-        it { described_class.new(minify: { mangle: false }).sprockets.js_compressor.should_not be_nil }
+        it { described_class.new(js_minify: false).sprockets.js_compressor.should be_nil }
+        it { described_class.new(js_minify: true).sprockets.js_compressor.should_not be_nil }
+        it { described_class.new(js_minify: { mangle: false }).sprockets.js_compressor.should_not be_nil }
       end
 
       describe 'css_minify' do
