@@ -17,8 +17,8 @@ module Guard
       @destination = @options[:destination] || 'public/javascripts'
       @root_file   = Array(@options[:root_file])
       @keep_paths  = @options[:keep_paths] || false
+      @sprockets = @options[:sprockets] || ::Sprockets::Environment.new
 
-      @sprockets = ::Sprockets::Environment.new
       @asset_paths.each { |p| @sprockets.append_path(p) }
       @root_file.each { |f| @sprockets.append_path(Pathname.new(f).dirname) }
 
